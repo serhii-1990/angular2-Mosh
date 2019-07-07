@@ -7,15 +7,11 @@ import { CoursesService } from "./courses.servise";
     <h1>
       {{ mainHeader }}
     </h1>
-    <img [src]="imageUrl" />
-    <br />
-    <button
-      class="btn btn-primary"
-      [class.active]="isActive"
-      [style.backgroundColor]="isActive ? 'green' : 'red'"
-    >
+
+    <button class="btn btn-primary" (click)="onSave($event)">
       Save
     </button>
+    <input (keyup)="onKeyUp($event)" />
   `
 })
 export class Courses {
@@ -28,5 +24,12 @@ export class Courses {
   }
   getTitle() {
     return this.mainHeader;
+  }
+  onSave($event) {
+    $event.stopPropagation();
+    console.log("button clicked", $event);
+  }
+  onKeyUp($event) {
+    console.log("button hit");
   }
 }
