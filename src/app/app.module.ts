@@ -7,11 +7,13 @@ import { AppComponent } from "./app.component";
 
 import { Courses } from "./courses.component";
 
+import { SummaryPipe } from "./summaru.pipe";
 import { CoursesService } from "./courses.servise";
 import { NavHeaderComponent } from "./nav-header/nav-header.component";
 @NgModule({
-  declarations: [AppComponent, Courses, NavHeaderComponent],
+  declarations: [AppComponent, Courses, NavHeaderComponent, SummaryPipe],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
+
   providers: [CoursesService],
   bootstrap: [AppComponent]
 })
