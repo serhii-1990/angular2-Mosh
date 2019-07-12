@@ -7,11 +7,7 @@ import { CoursesService } from "./courses.servise";
     <h1>
       {{ mainHeader }}
     </h1>
-
-    <button class="btn btn-primary" (click)="onSave($event)">
-      Save
-    </button>
-    <input (keyup)="onKeyUp($event)" />
+    <input [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
   `
 })
 export class Courses {
@@ -19,17 +15,14 @@ export class Courses {
   imageUrl = "https://picsum.photos/200/300";
   courses;
   isActive = true;
+  email = "me@example.com";
   constructor(servise: CoursesService) {
     this.courses = servise.getCourses();
   }
   getTitle() {
     return this.mainHeader;
   }
-  onSave($event) {
-    $event.stopPropagation();
-    console.log("button clicked", $event);
-  }
-  onKeyUp($event) {
-    console.log("button hit");
+  onKeyUp() {
+    console.log(this.email);
   }
 }
