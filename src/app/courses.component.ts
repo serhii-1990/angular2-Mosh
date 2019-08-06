@@ -4,16 +4,11 @@ import { CoursesService } from "./courses.service";
 @Component({
   selector: "courses",
   template: `
-    {{ text | summary: 10 }}
-    <img [src]="imageUrl" />
-    <table>
-      <tr>
-        <td [attr.colspan]="colSapn"></td>
-      </tr>
-    </table>
+    <button class="btn btn-primary" [class.active]="isActive">
+      Save
+    </button>
   `
 })
 export class Courses {
-  imageUrl = "";
-  text = "Lorem Ipsum is simply dummy text of the printing and typeset";
+  isActive = false;
 }
