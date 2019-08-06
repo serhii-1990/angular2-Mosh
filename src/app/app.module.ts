@@ -8,7 +8,7 @@ import { AppComponent } from "./app.component";
 import { Courses } from "./courses.component";
 
 import { SummaryPipe } from "./summaru.pipe";
-import { CoursesService } from "./courses.servise";
+import { CoursesService } from "./courses.service";
 import { NavHeaderComponent } from "./nav-header/nav-header.component";
 @NgModule({
   declarations: [AppComponent, Courses, NavHeaderComponent, SummaryPipe],
