@@ -4,12 +4,12 @@ import { CoursesService } from "./courses.service";
 @Component({
   selector: "courses",
   template: `
-    <input (keyup.enter)="onKeyUp()" />
+    <input [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
   `
 })
 export class Courses {
+  email;
   onKeyUp() {
-    // if ($event.keyCode === 13) console.log("ENTER was pressed");
-    console.log("ENTER was pressed");
+    console.log(this.email);
   }
 }
