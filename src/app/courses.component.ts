@@ -4,17 +4,21 @@ import { CoursesService } from "./courses.service";
 @Component({
   selector: "courses",
   template: `
-    <button class="btn btn-primary" [class.active]="isActive">
-      Save
-    </button>
-    <button
-      class="btn btn-primary"
-      [style.backgroundColor]="isActive ? 'blue' : 'white'"
-    >
-      Save
-    </button>
+    <div (click)="onDivClicked()">
+      <button class="btn btn-primary" (click)="onSave($event)">
+        Save
+      </button>
+    </div>
   `
 })
 export class Courses {
   isActive = false;
+  onDivClicked() {
+    console.log("Div was clicked");
+  }
+
+  onSave($event) {
+    $event.stopPropagation();
+    console.log("Save", $event);
+  }
 }
