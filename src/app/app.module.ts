@@ -7,7 +7,7 @@ import { AppComponent } from "./app.component";
 
 import { Courses } from "./courses.component";
 
-import { SummaryPipe } from "./summaru.pipe";
+import { SummaryPipe } from "./summary.pipe";
 import { CoursesService } from "./courses.service";
 import { NavHeaderComponent } from "./nav-header/nav-header.component";
 @NgModule({
