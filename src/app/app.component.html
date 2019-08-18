@@ -1,6 +1,4 @@
-<button (click)="getCourses()">Add corse</button>
-<ul>
-  <li *ngFor="let course of courses; trackBy: trackCourse">
-    {{ course.name }}
-  </li>
-</ul>
+<span *ngIf="task.assignee">{{ task.assignee.name }}</span>
+
+<!-- example of save traversal operator -->
+<span>{{ task.assignee?.name }}</span>
