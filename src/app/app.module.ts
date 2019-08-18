@@ -10,13 +10,15 @@ import { CoursesService } from "./courses.service";
 import { FavoriteComponent } from "./favorite/favorite.component";
 import { BootstrapPanelComponent } from "./bootstrap-panel/bootstrap-panel.component";
 import { NavbarComponent } from './navbar/navbar.component';
+import { InputFormatDirective } from './input-format.directive';
 @NgModule({
   declarations: [
     AppComponent,
     Courses,
     FavoriteComponent,
     BootstrapPanelComponent,
-    NavbarComponent
+    NavbarComponent,
+    InputFormatDirective
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [CoursesService],
