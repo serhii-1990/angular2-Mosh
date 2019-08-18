@@ -1,7 +1,6 @@
-<button (click)="onAdd()">Add corse</button>
+<button (click)="getCourses()">Add corse</button>
 <ul>
-  <li *ngFor="let course of courses">
+  <li *ngFor="let course of courses; trackBy: trackCourse">
     {{ course.name }}
-    <button (click)="onRemove(course)">Remuve</button>
   </li>
 </ul>
