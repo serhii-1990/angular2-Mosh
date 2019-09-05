@@ -7,7 +7,7 @@ import { NgForm } from "@angular/forms";
   styleUrls: ["./contact-form.component.css"]
 })
 export class ContactFormComponent {
-  contactMethods = [{ id: 1, name: "Email" }, { id: 2, name: "Phone" }];
+  contactMethods = [{ id: 1, name: "Viber" }, { id: 2, name: "Watsa" }];
   log(x) {
     console.log(x);
   }

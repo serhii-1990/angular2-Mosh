@@ -1,0 +1,40 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="username">Userame</label>
+    <input
+      formControlName="username"
+      type="text"
+      class="form-control"
+      id="username"
+    />
+    <div
+      class="alert alert-danger"
+      *ngIf="username.invalid && username.touched"
+    >
+      <div *ngIf="username.errors.required">User name required</div>
+      <div *ngIf="username.errors.minlength">
+        Minimum length {{ username.errors.minlength.requiredLength }}
+      </div>
+      <div *ngIf="username.errors.cannotContainSpace">
+        Username cannot containe spaice
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input
+      formControlName="password"
+      type="text"
+      class="form-control"
+      id="password"
+    />
+    <div
+      class="alert alert-danger"
+      *ngIf="password.invalid && password.touched"
+    >
+      Password is required
+    </div>
+  </div>
+
+  <button btn btn-default type="submit" class="btn btn-default">Submit</button>
+</form>

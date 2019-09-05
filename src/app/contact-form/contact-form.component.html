@@ -39,27 +39,22 @@
     <label>
       <input type="checkbox" ngModel name="isSubscribed" />
     </label>
-    <!-- <div class="form-group">
-      <label for="contactMethod">Contact Method</label
-      ><select
-        ngModel
-        name="contactMethod"
-        id="contactMethod"
-        class="from-control"
-      >
-        <option value="" disabled>Choose the contact method</option>
-        <option *ngFor="let method of contactMethods" [value]="method.id">{{
-          method.name
-        }}</option>
-      </select>
-    </div> -->
     <div *ngFor="let method of contactMethods" class="radio">
       <label for="">
         <input type="radio" ngModel name="contactMethod" [value]="method.id" />
         {{ method.name }}
       </label>
     </div>
-    <p>{{ f.value | json }}</p>
   </div>
+  <div class="form-group">
+    <label for="messagers">Messagers</label
+    ><select ngModel name="messagers" id="messagers" class="from-control">
+      <option value="" disabled>Choose the messager</option>
+      <option *ngFor="let messager of messagers" [value]="messager.id">{{
+        messager.name
+      }}</option>
+    </select>
+  </div>
+  <p>{{ f.value | json }}</p>
   <button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
 </form>
